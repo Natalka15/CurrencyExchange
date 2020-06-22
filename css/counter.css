@@ -35,7 +35,7 @@
     font-weight: bold;
 }
 
-.exchange__quote {
+.form__quote {
     padding: 8px;
     font-family: 'Lato', sans-serif;
     margin-left: 15px;
@@ -43,7 +43,7 @@
     background-color: rgb(241, 241, 241);
 }
 
-.exchange__quote:focus {
+.form__quote:focus {
     background-color: rgb(228, 228, 228);
 }
 
@@ -55,7 +55,7 @@
     font-size: 22px;
     width: 50%;
     color: white;
-    background-color: hsl(120, 100%, 28%);
+    background-color: #32b13c;
     border-radius: 8px;
     transition: .2s;
 }
