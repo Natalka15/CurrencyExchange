@@ -1,0 +1,82 @@
+
+.section--second {
+    margin: 50px auto;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+}
+
+.section__header {
+    font-size: 24px;
+}
+
+
+.form__fieldset {
+    border: none;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.form__legend {
+    font-size: 22px;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.form__label {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-right: 15px;
+}
+
+.form__label--quote {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.exchange__quote {
+    padding: 8px;
+    font-family: 'Lato', sans-serif;
+    margin-left: 15px;
+    border-radius: 8px;
+    background-color: rgb(241, 241, 241);
+}
+
+.exchange__quote:focus {
+    background-color: rgb(228, 228, 228);
+}
+
+.form__button {
+    display: block;
+    margin: 20px auto 15px;
+    padding: 12px;
+    border: none;
+    font-size: 22px;
+    width: 50%;
+    color: white;
+    background-color: hsl(120, 100%, 28%);
+    border-radius: 8px;
+    transition: .2s;
+}
+
+.form__button:hover {
+    background-color: hsl(120, 100%, 35%);
+}
+
+.form__quoteHeader {
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.form__quoteResult {
+    margin: 0 auto;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 22px;
+    width: 200px;
+    height: 50px;
+    color: rgb(17, 17, 17);
+    border: 1px rgb(155, 155, 155) solid;
+    background-color: rgb(202, 202, 202);
+}

@@ -1,0 +1,16 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    color: whitesmoke;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+body{
+    background-image: url("https://i.postimg.cc/W4RGJ97w/pexels-photo-590020.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+

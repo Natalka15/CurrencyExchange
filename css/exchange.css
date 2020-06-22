@@ -1,0 +1,14 @@
+.section {
+    padding: 0 20px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.section--first {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.section__paragraph {
+    font-size: 22px;
+}

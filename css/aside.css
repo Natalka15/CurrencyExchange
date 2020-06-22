@@ -1,0 +1,31 @@
+.aside{
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    padding-right: 50px;
+    text-align: justify;
+}
+@media (max-width: 767px){
+    .aside{
+    grid-column-start: 1;
+    grid-row-start: 3;
+    padding: 15px;
+    text-align: center;
+    }  
+}
+
+.aside__header{
+    font-size: 22px;
+}
+
+.aside__paragraph{
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 30px;
+}
+.aside__paragraph--contact{
+    margin: auto auto 15px;
+}
+.aside__link{
+    color: rgb(0, 0, 117);
+}
