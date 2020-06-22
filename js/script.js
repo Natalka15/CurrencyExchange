@@ -1,4 +1,5 @@
 window.setInterval(refresh, 12 * 60 * 60 * 1000);
+
 function refresh() {
   window.location.reload();
 }
