@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kantor</title>
+    <meta property="og:image" content="images/share.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/exchange.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/counter.css">
+    <link rel="stylesheet" href="css/aside.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script defer src="js/script.js"></script>
+</head>
+
+<!-- readme -->
+<!-- [![Image from Gyazo](https://i.gyazo.com/8dbed2a76042fa533aaff03c0f68a602.gif)](https://gyazo.com/8dbed2a76042fa533aaff03c0f68a602) -->
+
+<body>
+    <header class="header">
+        <h1>Witaj w najlepszym kantorze <br>
+            <stong>Best Currency!</stong>
+        </h1>
+    </header>
+    <main class="main">
+        <section class="section section--first">
+            <p class="section__paragraph">U nas znajdziesz aktualne kursy &dollar; i &euro; i wymienisz je w dostępnej
+                cenie.
+            </p>
+            <div class="container">
+                <table class="table">
+                    <caption class="table__caption">
+                        kursy walut
+                    </caption>
+                    <tr class="table__row">
+                        <th class="table__data--header table__data" scope="col">nazwa waluty</th>
+                        <th class="table__data--header table__data" scope="col">kupno</th>
+                        <th class="table__data--header table__data" scope="col">sprzedaż</th>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__data--header table__data" scope="row">euro, &euro;</th>
+                        <td class="table__data js-euroBuy"></td>
+                        <td class="table__data js-euroSell"></td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__data--header table__data" scope="row">dolar, &dollar;</th>
+                        <td class="table__data js-dollarBuy"></td>
+                        <td class="table__data js-dollarSell"></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section class="section section--second">
+            <header>
+                <h2 class="section__header">Przelicznik</h2>
+                <p class="section__paragraph">Wybierz jaką walutę chcesz sprzedać lub kupić, wpisz kwotę i przelicz.
+                </p>
+            </header>
+            <form class="form">
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">
+                        Wymiana:
+                    </legend>
+                    <label class="form__label">
+                        pln
+                        <input type="radio" required class="js-plnSell" name="currencySell">
+                    </label>
+                    <label class="form__label">
+                        eur
+                        <input type="radio" class="js-eurSell" name="currencySell">
+                    </label>
+                    <label class="form__label">
+                        usd
+                        <input type="radio" class="js-usdSell" name="currencySell">
+                    </label>
+                    <label class="form__label form__label--quote">
+                        kwota
+                        <input type="number" required class="form__quote js-quote" name="quote" min="1" step="0.5">
+                    </label>
+                </fieldset>
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">
+                        Wymiana na:
+                    </legend>
+                    <label class="form__label">
+                        pln
+                        <input type="radio" required class="js-plnBuy" name="currencyBuy">
+                    </label>
+                    <label class="form__label">
+                        eur
+                        <input type="radio" class="js-eurBuy" name="currencyBuy">
+                    </label>
+                    <label class="form__label">
+                        usd
+                        <input type="radio" class="js-usdBuy" name="currencyBuy">
+                    </label>
+                    <button class="form__button js-form__button">Przelicz</button>
+
+                </fieldset>
+            </form>
+            <h3 class="form__quoteHeader">
+                wynik
+            </h3>
+            <div class="form__quoteResult js-form__quoteResult"></div>
+        </section>
+        <aside class="aside">
+            <h4 class="aside__header">
+                Godziny otwarcia:
+            </h4>
+            <p class="aside__paragraph">
+                Poniedziałek - piątek: 9:00 - 18:00.
+            </p>
+            <h4 class="aside__header">
+                Rezerwacja kursu wymiany.
+            </h4>
+            <p class="aside__paragraph">
+                Możesz telefonicznie zarezerwować internetowy kurs walut na 24 godziny.
+            </p>
+            <p class="aside__paragraph">
+                Przy wymianie kwoty <strong>powyżej 1500 &euro;</strong> możliwe negocjacje.
+            </p>
+            <h4 class="aside__header">Kontakt</h4>
+            <p class="aside__paragraph aside__paragraph--contact">Numer telefonu:
+                <a href="tel:+48123456789" class="aside__link">123 456 789</a>
+            </p>
+            <p class="aside__paragraph aside__paragraph--contact">Adres e-mail:
+                <a href="mailto:bestcurrency@gmail.com" class="aside__link">bestcurrency@gmail.com</a>
+            </p>
+            <p class="aside__paragraph aside__paragraph--contact">
+                Adres: <br>
+                ul. Warszawska 1, lokal 1 <br>01-010 Warszawa
+                
+            </p>
+        </aside>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">
+            Kantor Best Currency, Warszawa. 2020 &copy;
+        </p>
+    </footer>
+</body>
+
+</html>
