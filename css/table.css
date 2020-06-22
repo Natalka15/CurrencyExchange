@@ -13,10 +13,10 @@
     padding: 8px;
     font-size: 18px;
     border: 1px rgb(32, 32, 32) solid;
-    background-color: hsla(120, 100%, 46%, 0.75);
+    background-color: #3ca77d;
 }
 .table__data--header{
     text-transform: capitalize;
     text-align: left;
-    background-color: hsla(120, 100%, 35%, 0.9);
+    background-color: #42b04c;
 }
