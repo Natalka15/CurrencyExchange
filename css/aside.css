@@ -3,8 +3,9 @@
     grid-row-start: 1;
     grid-row-end: 3;
     padding-right: 50px;
-    text-align: justify;
+    text-align: left;
 }
+
 @media (max-width: 767px){
     .aside{
     grid-column-start: 1;
@@ -27,5 +28,8 @@
     margin: auto auto 15px;
 }
 .aside__link{
-    color: rgb(0, 0, 117);
+    color: white;
+}
+.aside__link:hover{
+    color: rgb(179, 248, 250);
 }
