@@ -3,7 +3,7 @@
 ![](https://raw.githubusercontent.com/Natalka15/CurrencyExchange/master/images/share.png)
 
 ## Table of content
-* [Project description](#project-desription)
+* [Project description](#project-description)
 * [Link](#link)
 * [Set up](#set-up)
 * [Short guide](#short-guide)
@@ -39,7 +39,7 @@ The project is created with:
 - HTML5
 - CSS 3
 - Javascript ES5
-- BEM
+- Git, Github
 
 ## Project status
 The project was created on the beginning of my adventure with Front End Development.
