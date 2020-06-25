@@ -12,8 +12,8 @@
 
 ## Project description
 
-On this page you could find actual currency exchange rates which actualizing every 12 hours.
-Also there is a converter which helps you to count the amount of money you'll receive after converting.
+On this page you could find current currency exchange rates which actualizing every 12 hours.
+Also there is a converter which helps you  count the amount of money you'll receive after converting.
 
 ## Link
 [Currency Exchange page](https://natalka15.github.io/CurrencyExchange/).
@@ -38,8 +38,12 @@ The project is created with:
 
 - HTML5
 - CSS 3
-- Javascript ES5
-- Git, Github
+- Javascript ES6
+- Git
+
+### Methotology
+
+- BEM
 
 ## Project status
 The project was created on the beginning of my adventure with Front End Development.
