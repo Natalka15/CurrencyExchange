@@ -16,7 +16,7 @@ On this page you could find current currency exchange rates which actualizing ev
 Also there is a converter which helps you  count the amount of money you'll receive after converting.
 
 ## Link
-[Currency Exchange page](https://natalka15.github.io/CurrencyExchange/).
+[Currency Exchange page](https://github.com/nataliyasoyko/CurrencyExchange).
 
 ## Set up
 Page doesn't need extra installation, just use the link.
@@ -29,7 +29,7 @@ Page doesn't need extra installation, just use the link.
 
 2. Here is a converter. You have to choose the currency you want to sell, the currency you want to buy and write down the amount. Then click the button "Przelicz" and you'll get the result.
 
-[![Image from Gyazo](https://i.gyazo.com/8dbed2a76042fa533aaff03c0f68a602.gif)](https://gyazo.com/8dbed2a76042fa533aaff03c0f68a602)
+[![Image from Gyazo](https://i.gyazo.com/050830367b7860215264bb057579fc27.gif)](https://gyazo.com/050830367b7860215264bb057579fc27)
 
 3. You can find additional information and contact data on the right (or on the bottom on mobile phones).
 
