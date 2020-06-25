@@ -1,8 +1,9 @@
-window.setInterval(refresh, 12 * 60 * 60 * 1000);
-
-function refresh() {
+{
+  const refresh = () => {
   window.location.reload();
 }
+  window.setInterval(refresh, 12 * 60 * 60 * 1000);
+
 
 fetch("https://api.nbp.pl/api/exchangerates/tables/A/")
   .then((response) => response.json())
@@ -32,43 +33,32 @@ fetch("https://api.nbp.pl/api/exchangerates/tables/A/")
 
     const currencyCounter = (event) => {
       event.preventDefault();
-      const quoteResult = document.querySelector(".js-form__quoteResult");
-      const plnSell = document.querySelector(".js-plnSell").checked;
-      const eurSell = document.querySelector(".js-eurSell").checked;
-      const usdSell = document.querySelector(".js-usdSell").checked;
-      const plnBuy = document.querySelector(".js-plnBuy").checked;
-      const eurBuy = document.querySelector(".js-eurBuy").checked;
-      const usdBuy = document.querySelector(".js-usdBuy").checked;
-      const quote = document.querySelector(".js-quote").value;
+      const currencySell = document.querySelector(".js-currencySell").value;
+          const currencyBuy = document.querySelector(".js-currencyBuy").value;
+          const quote = document.querySelector(".js-quote").value;
+          let quoteResult = document.querySelector(".js-form__quoteResult")
+         
 
-      if (plnSell) {
-        if (eurBuy) {
-          quoteResult.innerText = (+quote / +euroBuy.innerText).toFixed(2);
-        } else if (usdBuy) {
-          quoteResult.innerText = (+quote / +dollarSell.innerText).toFixed(2);
-        } else if (plnBuy) {
-          quoteResult.innerText = +quote
-        }
-      } else if (eurSell) {
-        if (plnBuy) {
-          quoteResult.innerText = (+quote * +euroBuy.innerText).toFixed(2);
-        } else if (usdBuy) {
-          quoteResult.innerText = ((+quote * +euroBuy.innerText) / +dollarSell.innerText).toFixed(2);
-        } else if (eurBuy) {
-          quoteResult.innerText = +quote
-        }
-      } else if (usdSell) {
-        if (plnBuy) {
-          quoteResult.innerText = (+quote * +dollarBuy.innerText).toFixed(2);
-        } else if (usdBuy) {
-
-          quoteResult.innerText = +quote;
-        } else if (euroBuy) {
-          quoteResult.innerText = ((+quote * +dollarBuy.innerText) / +euroSell.innerText).toFixed(2);
-        }
-      } else {
-        quoteResult.innerText = "Wpisz wartość";
-      }
+          const counter = (sell, buy, quote) => {
+            if (sell === "PLN" && buy === "PLN" || sell === "EUR" && buy === "EUR" || sell === "USD" && buy === "USD") {
+              return +quote;
+            } else if (sell === "PLN" && buy === "EUR") {
+              return (+quote / +euroSell.innerText).toFixed(2);
+            }else if (sell === "PLN" && buy === "USD") {
+              return (+quote / +dollarSell.innerText).toFixed(2);
+            }else if (sell === "EUR" && buy === "PLN") {
+              return (+quote * +euroBuy.innerText).toFixed(2);
+            }else if (sell === "EUR" && buy === "USD") {
+              return ((+quote * +euroBuy.innerText) / +dollarSell.innerText).toFixed(2);
+            }else if (sell === "USD" && buy === "PLN") {
+              return (+quote * +dollarBuy.innerText).toFixed(2);
+            }else if (sell === "USD" && buy === "EUR") {
+              return ((+quote * +dollarBuy.innerText) / +euroSell.innerText).toFixed(2);
+            }else{
+              return "Wpisz wartość";
+            }
+          }
+          quoteResult.innerText = counter(currencySell, currencyBuy, quote);
     }
     const init = () => {
       const counterButton = document.querySelector(".js-form__button");
@@ -76,4 +66,4 @@ fetch("https://api.nbp.pl/api/exchangerates/tables/A/")
     }
     init();
 
-  });
+  })};
