@@ -40,7 +40,6 @@
     width: 90px;
     background-color: rgb(241, 241, 241);
     cursor: pointer; 
-    transition: .2s;
 }
 
 .form__quote {
