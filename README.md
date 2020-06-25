@@ -16,7 +16,7 @@ On this page you could find current currency exchange rates which actualizing ev
 Also there is a converter which helps you  count the amount of money you'll receive after converting.
 
 ## Link
-[Currency Exchange page](https://github.com/nataliyasoyko/CurrencyExchange).
+[Currency Exchange page](https://nataliyasoyko.github.io/CurrencyExchange/).
 
 ## Set up
 Page doesn't need extra installation, just use the link.
