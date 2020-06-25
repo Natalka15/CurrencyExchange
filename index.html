@@ -68,20 +68,15 @@
                         Wymiana:
                     </legend>
                     <label class="form__label">
-                        pln
-                        <input type="radio" required class="js-plnSell" name="currencySell">
-                    </label>
-                    <label class="form__label">
-                        eur
-                        <input type="radio" class="js-eurSell" name="currencySell">
-                    </label>
-                    <label class="form__label">
-                        usd
-                        <input type="radio" class="js-usdSell" name="currencySell">
+                        <select required class="form__select js-currencySell" name="currencySell">
+                            <option>PLN</option>
+                            <option>EUR</option>
+                            <option>USD</option>
+                        </select>
                     </label>
                     <label class="form__label form__label--quote">
                         kwota
-                        <input type="number" required class="form__quote js-quote" name="quote" min="1" step="0.5">
+                        <input type="number" required class="form__quote js-quote" name="quote" value= "1" min="1" step="0.5">
                     </label>
                 </fieldset>
                 <fieldset class="form__fieldset">
@@ -89,16 +84,11 @@
                         Wymiana na:
                     </legend>
                     <label class="form__label">
-                        pln
-                        <input type="radio" required class="js-plnBuy" name="currencyBuy">
-                    </label>
-                    <label class="form__label">
-                        eur
-                        <input type="radio" class="js-eurBuy" name="currencyBuy">
-                    </label>
-                    <label class="form__label">
-                        usd
-                        <input type="radio" class="js-usdBuy" name="currencyBuy">
+                        <select required class="form__select js-currencyBuy" name="currencyBuy">
+                            <option>PLN</option>
+                            <option>EUR</option>
+                            <option>USD</option>
+                        </select>
                     </label>
                     <button class="form__button js-form__button">Przelicz</button>
 
