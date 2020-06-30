@@ -14,10 +14,16 @@
       const dollarBuy = document.querySelector(".js-dollarBuy");
       const dollarSell = document.querySelector(".js-dollarSell");
 
-      const currencyRate = () => {
+      
+    
+      const margin = 0.035;
+
+      const calculateCurrencyRate = (currencyBuy, currencySell) => {
         for (const currencyItem of currency) {
-          const currencyLogo = currencyItem.code;
-          const margin = 0.035;
+const currencyLogo = currencyItem.code;
+      const currencyRate = currencyItem.mid;
+            console.log(currencyLogo, currencyRate)
+          
           if (currencyLogo === "EUR") {
             const euro = currencyItem.mid;
             euroBuy.innerText = (euro - margin).toFixed(2);
@@ -29,23 +35,17 @@
           }
         }
       }
-      currencyRate();
+      calculateCurrencyRate();
 
-      const counter = (sell, buy, quote) => {
-        if (sell === "PLN" && buy === "PLN" || sell === "EUR" && buy === "EUR" || sell === "USD" && buy === "USD") {
+      const converter = (sell, buy, quote, rate) => {
+        if (sell === buy) {
           return +quote;
-        } else if (sell === "PLN" && buy === "EUR") {
-          return (+quote / +euroSell.innerText);
-        } else if (sell === "PLN" && buy === "USD") {
-          return (+quote / +dollarSell.innerText);
-        } else if (sell === "EUR" && buy === "PLN") {
-          return (+quote * +euroBuy.innerText);
-        } else if (sell === "EUR" && buy === "USD") {
-          return ((+quote * +euroBuy.innerText) / +dollarSell.innerText);
-        } else if (sell === "USD" && buy === "PLN") {
-          return (+quote * +dollarBuy.innerText);
-        } else if (sell === "USD" && buy === "EUR") {
-          return ((+quote * +dollarBuy.innerText) / +euroSell.innerText);
+        } else if (sell === "PLN" && buy !== "PLN") {
+          return (+quote / (rate + margin));
+        } else if (sell !== "PLN" && buy === "PLN") {
+          return (+quote * (rate - margin));
+        } else if (sell !== "PLN" && buy !== "PLN") {
+          return ((+quote * (rate - margin)) / (rate + margin));
         } else {
           return "Wpisz wartość";
         }
@@ -57,7 +57,7 @@
         const currencyBuy = document.querySelector(".js-currencyBuy").value;
         const quote = document.querySelector(".js-quote").value;
         let quoteResult = document.querySelector(".js-form__quoteResult");
-        quoteResult.innerText = counter(currencySell, currencyBuy, quote).toFixed(2);
+        quoteResult.innerText = converter(currencySell, currencyBuy, quote, 4).toFixed(2);
       }
 
       const init = () => {
