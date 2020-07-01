@@ -13,16 +13,18 @@
     })
 
 
-  const currencyLogosArray = ["USD", "EUR", "CHF", "GBP", "UAH", "CZK", "NOK", "RON", "TRY", "RUB"]
-  console.log(currencyLogosArray)
 
   const render = (currency) => {
+    const currencyLogosArray = ["USD", "EUR", "CHF", "GBP", "UAH", "CZK", "NOK", "RON", "TRY", "RUB"]
+
+
     let htmlString = "";
     const margin = 0.02;
     for (const currencyItem of currency) {
-
-      htmlString +=
-        `
+      for (const currencyItem2 of currencyLogosArray) {
+        if (currencyItem.code === currencyItem2) {
+          htmlString +=
+            `
           <tr class = "table__row">
           <th class = "table__data--header table__data"
           scope = "row" >${currencyItem.currency} </th> 
@@ -31,8 +33,10 @@
           <td class = "table__data js-euroSell" > ${(+currencyItem.mid + margin).toFixed(3)}</td> 
           </tr>
             `
+        }
+      }
+      document.querySelector(".js-table").innerHTML = htmlString;
     }
-    document.querySelector(".js-table").innerHTML = htmlString;
   }
 
 
