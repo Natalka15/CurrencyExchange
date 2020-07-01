@@ -17,26 +17,37 @@
   const render = (currency) => {
     const currencyLogosArray = ["USD", "EUR", "CHF", "GBP", "UAH", "CZK", "NOK", "RON", "TRY", "RUB"]
 
-
-    let htmlString = "";
+    let htmlStringTableRates = "";
     const margin = 0.02;
     for (const currencyItem of currency) {
-      for (const currencyItem2 of currencyLogosArray) {
-        if (currencyItem.code === currencyItem2) {
-          htmlString +=
+      for (const currencyItemChosen of currencyLogosArray) {
+        if (currencyItem.code === currencyItemChosen) {
+          htmlStringTableRates +=
             `
           <tr class = "table__row">
           <th class = "table__data--header table__data"
           scope = "row" >${currencyItem.currency} </th> 
-          <td class = "table__data js-euroBuy" >${currencyItem.code} </td> 
-          <td class = "table__data js-euroBuy" >${(currencyItem.mid - margin).toFixed(3)} </td> 
-          <td class = "table__data js-euroSell" > ${(+currencyItem.mid + margin).toFixed(3)}</td> 
+          <td class = "table__data">${currencyItem.code} </td> 
+          <td class = "table__data">${(currencyItem.mid - margin).toFixed(3)} </td> 
+          <td class = "table__data"> ${(+currencyItem.mid + margin).toFixed(3)}</td> 
           </tr>
             `
         }
       }
-      document.querySelector(".js-table").innerHTML = htmlString;
+      document.querySelector(".js-table").innerHTML = htmlStringTableRates;
     }
+    let htmlStringOptions = "<option>PLN</option>";
+    
+    for (const currencyItemChosen of currencyLogosArray){
+
+    htmlStringOptions += 
+    `
+    <option>${currencyItemChosen}</option>
+    `
+};
+  document.querySelector(".js-currencySell").innerHTML = htmlStringOptions;
+  document.querySelector(".js-currencyBuy").innerHTML = htmlStringOptions;
+
   }
 
 
@@ -60,7 +71,7 @@
     const currencyBuy = document.querySelector(".js-currencyBuy").value;
     const quote = document.querySelector(".js-quote").value;
     let quoteResult = document.querySelector(".js-form__quoteResult");
-    quoteResult.innerText = converter(currencySell, currencyBuy, quote, rate).toFixed(2);
+    quoteResult.innerText = converter(currencySell, currencyBuy, quote, rate);
 
   }
 
