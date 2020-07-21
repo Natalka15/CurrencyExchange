@@ -46,5 +46,5 @@ The project is created with:
 - BEM
 
 ## Project status
-The project was created on the beginning of my adventure with Front End Development.
+The project was created on the beginning of my adventure with Front End Development with Youcode course.
 It will be evolved along with my skills.
